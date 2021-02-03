@@ -13,16 +13,16 @@ except NameError:
 else:
     storyline.print_story()
 
-
+k = 2
 print("OLD STORY: ")
 story = storyline.story_plain_text
 print("\n".join(story))
 
-start = randint(0, len(story) - 2)
-end = start + 2
+start = randint(0, len(story) - k)
+end = start + k
 
 last_5 = story[start:end]
 shuffle(last_5)
-new_story = story[0:start] + last_5 + story[start + 2:]
+new_story = story[0:start] + last_5 + story[end:]
 print("NEW STORY: ")
 print("\n".join(new_story))
